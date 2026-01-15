@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap');
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #1a0033 0%, #000033 50%, #1a0033 100%);
+  font-family: 'Quicksand', sans-serif;
+  color: #c8d5e0;
+}
+
+/* Sparkle container */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background: 
+    radial-gradient(circle, #fffacd 0%, rgba(255, 250, 205, 0.8) 10%, transparent 50%) 20% 30% / 18px 18px,
+    radial-gradient(circle, #fffacd 0%, rgba(255, 250, 205, 0.7) 10%, transparent 50%) 60% 70% / 16px 16px,
+    radial-gradient(circle, #ffb3d9 0%, rgba(255, 179, 217, 0.8) 10%, transparent 50%) 50% 50% / 14px 14px,
+    radial-gradient(circle, #fffacd 0%, rgba(255, 250, 205, 0.6) 10%, transparent 50%) 80% 10% / 12px 12px,
+    radial-gradient(circle, #fffacd 0%, rgba(255, 250, 205, 0.75) 10%, transparent 50%) 90% 60% / 20px 20px,
+    radial-gradient(circle, #b19cd9 0%, rgba(177, 156, 217, 0.8) 10%, transparent 50%) 33% 80% / 15px 15px,
+    radial-gradient(circle, #fffacd 0%, rgba(255, 250, 205, 0.8) 10%, transparent 50%) 70% 40% / 17px 17px,
+    radial-gradient(circle, #fffacd 0%, rgba(255, 250, 205, 0.7) 10%, transparent 50%) 15% 60% / 13px 13px,
+    radial-gradient(circle, #90ee90 0%, rgba(144, 238, 144, 0.7) 10%, transparent 50%) 85% 85% / 16px 16px;
+  background-repeat: no-repeat;
+  animation: sparkle-drift 15s linear infinite;
+}
+
+/* Additional sparkle layer */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background: 
+    radial-gradient(circle, #fffacd 0%, rgba(255, 250, 205, 0.9) 10%, transparent 50%) 10% 20% / 14px 14px,
+    radial-gradient(circle, #ffb3d9 0%, rgba(255, 179, 217, 0.75) 10%, transparent 50%) 40% 60% / 17px 17px,
+    radial-gradient(circle, #fffacd 0%, rgba(255, 250, 205, 0.8) 10%, transparent 50%) 75% 85% / 13px 13px,
+    radial-gradient(circle, #fffacd 0%, rgba(255, 250, 205, 0.7) 10%, transparent 50%) 15% 90% / 15px 15px,
+    radial-gradient(circle, #fffacd 0%, rgba(255, 250, 205, 0.85) 10%, transparent 50%) 85% 35% / 12px 12px,
+    radial-gradient(circle, #90ee90 0%, rgba(144, 238, 144, 0.75) 10%, transparent 50%) 25% 45% / 14px 14px,
+    radial-gradient(circle, #fffacd 0%, rgba(255, 250, 205, 0.8) 10%, transparent 50%) 95% 75% / 16px 16px,
+    radial-gradient(circle, #b19cd9 0%, rgba(177, 156, 217, 0.7) 10%, transparent 50%) 55% 25% / 15px 15px;
+  background-repeat: no-repeat;
+  animation: sparkle-drift 20s linear infinite;
+}
+
+@keyframes sparkle-drift {
+  0% {
+    transform: translate(-100%, -100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100%, 100%);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Style the table */
+table {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  color: #c8d5e0;
+}
+
+thead {
+  background: rgba(200, 213, 224, 0.1);
+}
+
+tbody tr {
+  background: rgba(200, 213, 224, 0.05);
+}
+
+tbody tr:hover {
+  background: rgba(200, 213, 224, 0.15);
+}
+
+th, td {
+  color: #c8d5e0;
+}
+
+h2 {
+  position: relative;
+  z-index: 1;
+  color: #c8d5e0;
+  font-weight: 600;
+}
